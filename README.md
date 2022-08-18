@@ -1,5 +1,5 @@
 # Submission-BFAA3-Dicoding
-Submission-BFAA2-Dicoding(Navigation & Api)
+Submission-BFAA#-Dicoding(Final)
 
 Kriteria
 Fitur yang harus ditambahkan pada aplikasi:
