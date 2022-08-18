@@ -1,8 +1,14 @@
-# Submission-BFAA2-Dicoding
+# Submission-BFAA3-Dicoding
 Submission-BFAA2-Dicoding(Navigation & Api)
 
-- Mempertahankan fitur pada Submission 1. (Terpenuhi)
-- Pencarian User menggunakan data dari API berjalan dengan baik. (Terpenuhi)
-- Menggunakan TabLayout sebagai navigasi antara halaman List Follower dan List Following. (Terpenuhi)
-- Terdapat indikator loading saat aplikasi memuat data di semua halaman. (Terpenuhi)
-- Aplikasi tidak force closed. (Terpenuhi)
+Kriteria
+Fitur yang harus ditambahkan pada aplikasi:
+- Favorite User dengan Database
+Syarat:
+- Aplikasi harus bisa menambah dan menghapus user dari daftar favorite.
+- Aplikasi harus mempunyai halaman yang menampilkan daftar favorite.
+- Menampilkan halaman detail dari daftar favorite.
+
+Pengaturan Tema
+Syarat:
+- Membuat menu untuk mengganti tema (light theme atau dark theme) dengan menggunakan penyimpanan key-value.
