@@ -7,6 +7,10 @@ import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.githubusernavapi.databinding.ActivityDetailUserBinding
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class DetailUserActivity : AppCompatActivity() {
 
@@ -20,10 +24,13 @@ class DetailUserActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val username = intent.getStringExtra(EXTRA_USERNAME)
+        val id = intent.getIntExtra(EXTRA_ID, 0)
+        val avatarUrl = intent.getStringExtra(EXTRA_AVATAR)
+
         val bundle = Bundle()
         bundle.putString(EXTRA_USERNAME, username)
 
-        viewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory()).get(DetailUserViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(DetailUserViewModel::class.java)
 
         if (username != null) {
             viewModel.setUserDetail(username)
@@ -46,6 +53,32 @@ class DetailUserActivity : AppCompatActivity() {
             }
         }
 
+        var _isChecked = false
+        CoroutineScope(Dispatchers.IO).launch {
+            var count = viewModel.checkUser(id)
+            withContext(Dispatchers.Main){
+                if (count != null){
+                    if (count>0){
+                        binding.toggleFav.isChecked = true
+                        _isChecked = true
+                    }else {
+                        binding.toggleFav.isChecked = false
+                        _isChecked = false
+                    }
+                }
+            }
+        }
+
+        binding.toggleFav.setOnClickListener{
+            _isChecked = !_isChecked
+            if (_isChecked){
+                viewModel.addToFavorite(username.toString(),id, avatarUrl.toString())
+            }else{
+                viewModel.removeFromFavorite(id)
+            }
+            binding.toggleFav.isChecked = _isChecked
+        }
+
         val sectionPagerAdapter = SectionPagerAdapter(this, supportFragmentManager, bundle)
         binding.apply {
             viewPager.adapter = sectionPagerAdapter
@@ -56,5 +89,7 @@ class DetailUserActivity : AppCompatActivity() {
     }
     companion object{
         const val EXTRA_USERNAME = "extra_username"
+        const val EXTRA_ID = "extra_id"
+        const val EXTRA_AVATAR = "extra_avatar"
     }
 }

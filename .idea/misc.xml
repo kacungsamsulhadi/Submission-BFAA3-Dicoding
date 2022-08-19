@@ -3,6 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/sam/GithubUserFinal/app/src/main/res/drawable/fav_toogle.xml" value="0.23" />
+        <entry key="..\:/Users/sam/GithubUserFinal/app/src/main/res/drawable/ic_favorite.xml" value="0.23" />
+        <entry key="..\:/Users/sam/GithubUserFinal/app/src/main/res/drawable/ic_favorite_grey.xml" value="0.23" />
+        <entry key="..\:/Users/sam/GithubUserFinal/app/src/main/res/drawable/ic_favorite_outline.xml" value="0.23" />
+        <entry key="..\:/Users/sam/GithubUserFinal/app/src/main/res/layout/activity_detail_user.xml" value="0.2234375" />
+        <entry key="..\:/Users/sam/GithubUserFinal/app/src/main/res/layout/activity_favorite.xml" value="0.33" />
+        <entry key="..\:/Users/sam/GithubUserFinal/app/src/main/res/menu/option_menu.xml" value="0.1" />
         <entry key="..\:/Users/sam/GithubUserNavAPI/app/src/main/res/layout/activity_detail_user.xml" value="0.33" />
         <entry key="..\:/Users/sam/GithubUserNavAPI/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/sam/GithubUserNavAPI/app/src/main/res/layout/fragment_follow.xml" value="0.1381340579710145" />

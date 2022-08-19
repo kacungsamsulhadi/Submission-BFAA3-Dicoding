@@ -10,4 +10,6 @@
     <string name="name">name</string>
     <string name="company">company</string>
     <string name="avatar">avatar</string>
+    <string name="togglebutton">ToggleButton</string>
+    <string name="favorite">Favorite</string>
 </resources>
