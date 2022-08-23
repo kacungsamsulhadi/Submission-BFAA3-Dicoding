@@ -21,7 +21,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/iv_profile"
@@ -34,7 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"
-        android:textColor="@color/black"
+
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@+id/tv_nama"
         app:layout_constraintStart_toStartOf="@+id/tv_nama"
@@ -46,7 +45,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"
-        android:textColor="@color/black"
+
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/tv_nama"
         app:layout_constraintStart_toStartOf="@+id/tv_nama"
@@ -59,7 +58,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"
         android:gravity="center"
-        android:textColor="@color/black"
+
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@+id/tv_username"
         app:layout_constraintStart_toStartOf="@+id/tv_username"
@@ -83,7 +82,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
-            android:textColor="@color/black"
+
             android:textSize="14sp"
             app:drawableStartCompat="@drawable/ic_repo"
             tools:text="9 repository" />
@@ -107,7 +106,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
             android:gravity="center_vertical"
-            android:textColor="@color/black"
+
             android:textSize="14sp"
             app:drawableStartCompat="@drawable/ic_people"
             tools:text="9 follower" />
@@ -117,7 +116,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
-            android:textColor="@color/black"
+
             android:textSize="14sp"
             tools:text="9 following" />
     </LinearLayout>
@@ -127,11 +126,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:background="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:tabTextColor="@color/black" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/view_pager"

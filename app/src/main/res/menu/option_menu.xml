@@ -2,9 +2,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
+        android:id="@+id/theme_switch"
+        android:title="@string/setting"
+        android:icon="@drawable/ic_light"
+        app:showAsAction="never" />
+    <item
         android:id="@+id/favorite_menu"
         android:title="@string/favorite"
         android:icon="@drawable/ic_favorite_white"
-        app:showAsAction="always"/>
+        app:showAsAction="never"/>
 
 </menu>

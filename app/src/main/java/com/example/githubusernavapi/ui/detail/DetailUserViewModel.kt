@@ -44,7 +44,6 @@ class DetailUserViewModel(application: Application) : AndroidViewModel(applicati
                 override fun onFailure(call: Call<DetailUserRes>, t: Throwable) {
                     Log.d("failure", t.message.toString())
                 }
-
             })
     }
 
@@ -54,7 +53,7 @@ class DetailUserViewModel(application: Application) : AndroidViewModel(applicati
 
     fun addToFavorite(username: String, id: Int, avatarUrl: String) {
         CoroutineScope(Dispatchers.IO).launch {
-            var user = FavUser(
+            val user = FavUser(
                 username,
                 id,
                 avatarUrl

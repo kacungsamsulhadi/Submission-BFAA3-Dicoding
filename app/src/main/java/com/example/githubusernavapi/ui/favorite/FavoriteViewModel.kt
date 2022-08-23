@@ -7,7 +7,7 @@ import com.example.githubusernavapi.data.local.FavUser
 import com.example.githubusernavapi.data.local.FavUserDao
 import com.example.githubusernavapi.data.local.UserDB
 
-class FavoriteViewModel(application: Application): AndroidViewModel(application){
+class FavoriteViewModel(application: Application) : AndroidViewModel(application) {
 
     private var userDao: FavUserDao?
     private var userDB: UserDB?
@@ -16,7 +16,8 @@ class FavoriteViewModel(application: Application): AndroidViewModel(application)
         userDB = UserDB.getDB(application)
         userDao = userDB?.favUserDao()
     }
-    fun getFavUser():LiveData<List<FavUser>>? {
+
+    fun getFavUser(): LiveData<List<FavUser>>? {
         return userDao?.getFavUser()
     }
 }

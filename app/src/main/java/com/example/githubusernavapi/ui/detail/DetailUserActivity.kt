@@ -30,7 +30,7 @@ class DetailUserActivity : AppCompatActivity() {
         val bundle = Bundle()
         bundle.putString(EXTRA_USERNAME, username)
 
-        viewModel = ViewModelProvider(this).get(DetailUserViewModel::class.java)
+        viewModel = ViewModelProvider(this)[DetailUserViewModel::class.java]
 
         if (username != null) {
             viewModel.setUserDetail(username)
@@ -55,7 +55,7 @@ class DetailUserActivity : AppCompatActivity() {
 
         var _isChecked = false
         CoroutineScope(Dispatchers.IO).launch {
-            var count = viewModel.checkUser(id)
+            val count = viewModel.checkUser(id)
             withContext(Dispatchers.Main){
                 if (count != null){
                     if (count>0){

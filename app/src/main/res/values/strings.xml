@@ -12,4 +12,6 @@
     <string name="avatar">avatar</string>
     <string name="togglebutton">ToggleButton</string>
     <string name="favorite">Favorite</string>
+    <string name="setting">Setting</string>
+    <string name="dark_mode">Dark Mode</string>
 </resources>
